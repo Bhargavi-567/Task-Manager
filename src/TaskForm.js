@@ -70,7 +70,7 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
             onChange={(e) => setTaskInput(e.target.value)}
             error={!!error}
             autoComplete="off"
-            autoFocus={open}
+            autoFocus={true}
             helperText={error}
             sx={{
               "& .MuiOutlinedInput-root": {
@@ -87,7 +87,6 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
             }}
           />
           <TextField
-            autoFocus={true}
             autoComplete="off"
             type="text"
             value={taskDescription}
