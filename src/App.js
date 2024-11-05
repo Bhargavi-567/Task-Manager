@@ -5,8 +5,8 @@ import TaskDetails from "./taskdetails";
 import ClientReviewFeedbackCard from "./ClientReviewFeedbackCard";
 
 const App = () => {
-  return (  
-    <Router>
+  return (
+    <Router>  
       <Routes>
         <Route path="/" element={<TaskManager />} />
         <Route path="/tasks" element={<ClientReviewFeedbackCard />} />

@@ -7,7 +7,7 @@ import {
   DialogTitle,
   TextField,
 } from "@mui/material";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./TaskForm.css";
@@ -16,7 +16,6 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
   const [taskInput, setTaskInput] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [error, setError] = useState("");
-  const inputRef = useRef(null);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -51,14 +50,7 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
       e.preventDefault();
       setTaskDescription((prev) => `${prev}\n.`);
     }
-  };
-
-  /* useEffect(() => {
-    if (open && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [open, inputRef]); */
-
+  }
   return (
     open && (
       <Dialog open={open} onClose={handleClose}>
@@ -101,7 +93,7 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
             value={taskDescription}
             label="Description"
             onChange={(e) => setTaskDescription(e.target.value)}
-            onKeyDown={handleKeyPress}
+             onKeyDown={handleKeyPress}
             margin="dense"
             variant="outlined"
             multiline
