@@ -36,7 +36,7 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
   const handleClose = () => {
     setTaskInput(updatedtasks ? updatedtasks.title : "");
     setTaskDescription(updatedtasks ? updatedtasks.description : "");
-    setError(""); 
+    setError("");
     onClose();
   };
 
@@ -49,9 +49,9 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      setTaskDescription((prev) =>`${prev}\n.`);
+      setTaskDescription((prev) => `${prev}\n.`);
     }
-  }
+  };
 
   /* useEffect(() => {
     if (open && inputRef.current) {
@@ -67,7 +67,7 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
           <DialogContentText>
             Please enter the details of the task you want to add.
           </DialogContentText>
-          
+
           <TextField
             margin="dense"
             label="Task"
@@ -78,7 +78,7 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
             onChange={(e) => setTaskInput(e.target.value)}
             error={!!error}
             autoComplete="off"
-            autoFocus ={open}
+            autoFocus={open}
             helperText={error}
             sx={{
               "& .MuiOutlinedInput-root": {
@@ -95,16 +95,16 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
             }}
           />
           <TextField
-           autoFocus ={true}
-               autoComplete="off"
+            autoFocus={true}
+            autoComplete="off"
             type="text"
             value={taskDescription}
             label="Description"
             onChange={(e) => setTaskDescription(e.target.value)}
-/*             onKeyDown={handleKeyPress}
- */            margin="dense"
+            onKeyDown={handleKeyPress}
+            margin="dense"
             variant="outlined"
-            multiline 
+            multiline
             fullWidth
             sx={{
               "& .MuiOutlinedInput-root": {

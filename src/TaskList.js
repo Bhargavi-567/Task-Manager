@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import "./tasklist.css";
-import { useNavigate } from "react-router-dom";
-import Modal from "@mui/material/Modal";
+import EditIcon from "@mui/icons-material/Edit";
 import { Button } from "@mui/material";
-import { Task } from "@mui/icons-material";
+import Modal from "@mui/material/Modal";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./tasklist.css";
 
 const TaskList = ({
   tasks,
