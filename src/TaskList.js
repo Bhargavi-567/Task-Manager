@@ -59,6 +59,7 @@ const TaskList = ({
                     onEdit(task);
                   }}
                   aria-label="Edit task"
+                  disabled={task.completed}
                 >
                   <EditIcon className="taskIcon" />
                   Edit

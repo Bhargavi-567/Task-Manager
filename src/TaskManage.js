@@ -159,8 +159,9 @@ const TaskManager = () => {
             sx={{
               marginTop: "2%",
               textAlign: "center",
-              paddingLeft: "28%",
-              paddingRight: "28%",
+              paddingLeft: "34%",
+              paddingRight: "34%",
+              textTransform:"none"
             }}
           >
             Add New Task

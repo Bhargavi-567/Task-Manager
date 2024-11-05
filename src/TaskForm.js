@@ -54,10 +54,10 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
   return (
     open && (
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Add a New Task</DialogTitle>
+        <DialogTitle>{updatedtasks ? "Update Task":"Add Task"}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Please enter the details of the task you want to add.
+            Please enter the details of the task you want to {updatedtasks ? "update" :"edit"}
           </DialogContentText>
 
           <TextField
@@ -112,12 +112,12 @@ const TaskForm = ({ addTask, open, onClose, updatedtasks }) => {
             }}
           />
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
+        <DialogActions sx={{padding: '24px'}}>
+          <Button onClick={handleClose} color="primary" sx={{textTransform: "none"}}>
             Close
           </Button>
-          <Button onClick={handleSubmit} color="primary">
-            Add Task
+          <Button onClick={handleSubmit} color="primary" variant="contained" sx={{textTransform: "none"}}>
+            {updatedtasks ?"Update" : "Add"}
           </Button>
         </DialogActions>
       </Dialog>
