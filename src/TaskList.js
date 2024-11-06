@@ -61,7 +61,7 @@ const TaskList = ({
                   aria-label="Edit task"
                   disabled={task.completed}
                 >
-                  <EditIcon className="taskIcon" />
+                  <EditIcon className={`${task.completed ? "" : "taskIcon"}`} disabled={task.completed}  />
                   Edit
                 </button>
                 <button
@@ -82,13 +82,13 @@ const TaskList = ({
                   }}
                   className="CompleteButton"
                   aria-label="Toggle task completion"
-                  disabled={task.completed}
-                >
+                  disabled={task.completed}                 >
                   <input
                     type="checkbox"
                     checked={task.completed}
                     readOnly
                     className="taskCheckbox"
+                    disabled={task.completed}
                   />
                   Mark As Done
                 </button>

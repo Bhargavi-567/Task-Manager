@@ -133,8 +133,7 @@ const TaskManager = () => {
               )}
               sx={{
                 marginTop: "20px",
-                marginLeft: "20px",
-                marginRight: "11px",
+                marginLeft: "3%",
               }}
             />
           </div>
@@ -159,8 +158,8 @@ const TaskManager = () => {
             sx={{
               marginTop: "2%",
               textAlign: "center",
-              paddingLeft: "34%",
-              paddingRight: "34%",
+              paddingLeft: "30%",
+              paddingRight: "30%",
               textTransform:"none"
             }}
           >
