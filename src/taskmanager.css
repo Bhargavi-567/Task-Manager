@@ -165,3 +165,68 @@ button:hover {
 .notification {
   margin-bottom: 2%;
 }
+@media (max-width: 390px) {
+  .TaskManager {
+    width: 100%; /* Uses full screen width */
+    padding: 8px;
+    margin: 5px auto; /* Minimal top and bottom margin */
+    border: none; /* Remove border for a cleaner look */
+  }
+
+  .taskcard {
+    width: 100%; /* Full width for simplicity */
+    padding: 10px;
+    margin: 5px 0;
+    box-shadow: none; /* No shadow to keep it simple */
+    border-bottom: 1px solid #ddd; /* Thin border for separation */
+  }
+
+  .taskcard li {
+    width: 100%; /* Full width for list items */
+    padding: 6px;
+    font-size: 12px; /* Smaller font size to fit text */
+    border-bottom: 1px solid #eee;
+  }
+
+  .TopElements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:15px;
+    width: 30px;
+  }
+
+  .createButton {
+    width: 100%; /* Full width for easy tapping */
+    padding: 6px;
+    font-size: 12px; /* Smaller font for compact design */
+  }
+
+  .autocomplete {
+    margin-bottom: 8px;
+    width:100%;
+  }
+
+  .Heading {
+    font-size: 16px; 
+    text-align: center;
+  }
+  h1
+  {
+    margin-right: 20px;
+  }
+
+  .CompleteButton {
+    padding: 4px 8px; /* Compact button padding */
+    font-size: 12px; /* Smaller font */
+  }
+
+  /* Additional adjustments */
+  body {
+    font-size: 12px; /* Smaller base font size */
+  }
+
+  .taskCheckbox {
+    transform: scale(1.1); /* Slightly larger checkbox for easier tapping */
+  }
+}
